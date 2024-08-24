@@ -8,8 +8,10 @@ const outputDir = path.join(__dirname, "..", "..", "apps", "dapp", "config");
 function processDeployments() {
   const deployments = {};
 
-  // Find all run-latest.json files
-  const files = glob.sync(`${contractsDir}/broadcast/**/**/run-latest.json`);
+  // Find all run-latest.json files, excluding dry-run files
+  const files = glob.sync(`${contractsDir}/broadcast/**/**/run-latest.json`, {
+    ignore: `${contractsDir}/broadcast/**/dry-run/**`,
+  });
 
   files.forEach((file) => {
     const data = JSON.parse(fs.readFileSync(file, "utf8"));
@@ -43,6 +45,7 @@ function processDeployments() {
   const output = `export const deployments = ${JSON.stringify(deployments, null, 2)} as const;`;
   fs.writeFileSync(outputPath, output);
 
+  console.log(output);
   console.log(`Deployments processed and written to ${outputPath}`);
 }
 
