@@ -38,6 +38,12 @@ importers:
       '@tanstack/react-query-devtools':
         specifier: ^5.52.1
         version: 5.52.1(@tanstack/react-query@5.52.1)(react@18.3.1)
+      '@wagmi/connectors':
+        specifier: ^5.1.7
+        version: 5.1.7(@types/react@18.3.4)(@wagmi/core@2.13.4)(react-dom@18.3.1)(react-native@0.75.2)(react@18.3.1)(typescript@5.5.4)(viem@2.20.0)(zod@3.23.8)
+      '@wagmi/core':
+        specifier: ^2.13.4
+        version: 2.13.4(@types/react@18.3.4)(react@18.3.1)(typescript@5.5.4)(viem@2.20.0)
       connectkit:
         specifier: ^1.8.2
         version: 1.8.2(@babel/core@7.25.2)(@tanstack/react-query@5.52.1)(react-dom@18.3.1)(react-is@18.3.1)(react@18.3.1)(viem@2.20.0)(wagmi@2.12.7)
@@ -60,7 +66,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/ui
       viem:
-        specifier: 2.x
+        specifier: ~2.20.0
         version: 2.20.0(typescript@5.5.4)(zod@3.23.8)
       wagmi:
         specifier: ^2.12.7
