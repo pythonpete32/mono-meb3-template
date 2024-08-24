@@ -1,0 +1,11 @@
+{
+  "name": "dev-helpers",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node processDeployments.js"
+  },
+  "dependencies": {
+    "glob": "^8.0.3"
+  }
+}

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 42069 --turbo",
+    "dev": "wagmi generate && next dev --port 42069 --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --max-warnings 0"
