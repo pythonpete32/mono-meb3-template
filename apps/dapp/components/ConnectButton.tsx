@@ -10,7 +10,11 @@ const ConnectButton = () => {
     <ConnectKitButton.Custom>
       {({ isConnected, isConnecting, show, hide, address, ensName }) => {
         return (
-          <Button onClick={show} className="flex items-center gap-2">
+          <Button
+            onClick={show}
+            variant="neutral"
+            className="flex items-center gap-2"
+          >
             <Wallet className="w-4 h-4" />
             {isConnected ? (
               <span>
