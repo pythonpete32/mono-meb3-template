@@ -1,15 +1,17 @@
 import { createConfig, http } from "wagmi";
-import { sepolia } from "wagmi/chains";
+import { sepolia, mainnet } from "wagmi/chains";
 import { getDefaultConfig } from "connectkit";
 
 export const clientConfig = createConfig(
   getDefaultConfig({
     // Your dApps chains
-    chains: [sepolia],
+    chains: [mainnet, sepolia],
     transports: {
       // RPC URL for each chain
+      // 💩 TODO: make a custom chain for tenderly, dont use mainnet
+      [mainnet.id]: http(process.env.NEXT_PUBLIC_TENDERLY_RPC),
       [sepolia.id]: http(
-        `https://eth-mainnet.g.alchemy.com/v2/${process.env.NEXT_PUBLIC_ALCHEMY_ID}`
+        `https://eth-sepolia.g.alchemy.com/v2/${process.env.NEXT_PUBLIC_ALCHEMY_ID}`
       ),
     },
 
