@@ -3,11 +3,8 @@
   "version": "0.4.1",
   "description": "A Foundry project, obviously",
   "license": "GPL-3.0",
-  "author": {
-    "name": "Rhinestone",
-    "url": "https://rhinestone.wtf"
-  },
   "scripts": {
+    "dev": "source .env && script/deploy.sh",
     "build": "forge build",
     "build:optimized": "FOUNDRY_PROFILE=optimized forge build",
     "build:smt": "FOUNDRY_PROFILE=smt forge build",
@@ -35,19 +32,6 @@
     "package.json",
     "foundry.toml",
     "remappings.txt"
-  ],
-  "homepage": "https://docs.rhinestone.wtf/module-template",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rhinestonewtf/module-template.git"
-  },
-  "bugs": {
-    "url": "https://github.com/rhinestonewtf/module-template/issues"
-  },
-  "keywords": [
-    "account abstraction",
-    "smart account modules",
-    "module template"
   ],
   "publishConfig": {
     "access": "public"

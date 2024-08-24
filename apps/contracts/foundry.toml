@@ -4,11 +4,15 @@ src = "src"
 out = "out"
 script = "script"
 libs = ["node_modules"]
-fs_permissions = [{ access = "read", path = "out-optimized" }, { access = "read-write", path = "gas_calculations" }]
+fs_permissions = [
+    { access = "read", path = "out-optimized" },
+    { access = "read-write", path = "gas_calculations" },
+]
 allow_paths = ["*", "/"]
 
 [rpc_endpoints]
-mainnet = "${MAINNET_RPC_URL}" 
+mainnet = "${MAINNET_RPC_URL}"
+unknown_chain = { key = "${TENDERLY_ACCESS_KEY}", chain = 1, url = "${TENDERLY_RPC}" }
 
 [fmt]
 bracket_spacing = true
