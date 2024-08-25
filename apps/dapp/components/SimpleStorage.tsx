@@ -42,7 +42,7 @@ const SimpleStorageComponent = () => {
   };
 
   return (
-    <Card className="w-[350px]">
+    <Card className="w-[350px]" variant="neutral">
       <CardHeader>
         <CardTitle>SimpleStorage Interaction</CardTitle>
         <CardDescription>
