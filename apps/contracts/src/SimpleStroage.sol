@@ -9,6 +9,10 @@ contract SimpleStorage {
     /// @dev This variable is private and can only be accessed through the getter function
     string private storedData;
 
+    constructor() {
+        storedData = "wagmi";
+    }
+
     /// @notice Sets the stored string value
     /// @dev Updates the private storedData variable
     /// @param newValue The new string value to be stored
