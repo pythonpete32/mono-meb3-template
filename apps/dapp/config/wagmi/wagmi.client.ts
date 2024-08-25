@@ -1,21 +1,18 @@
 import { createConfig, http } from "wagmi";
-import { sepolia, mainnet } from "wagmi/chains";
+import { sepolia } from "wagmi/chains";
 import { getDefaultConfig } from "connectkit";
+import { virtualMainnet } from "./chains";
 
 export const clientConfig = createConfig(
   getDefaultConfig({
-    // Your dApps chains
-    chains: [mainnet, sepolia],
+    chains: [virtualMainnet, sepolia],
     transports: {
-      // RPC URL for each chain
-      // 💩 TODO: make a custom chain for tenderly, dont use mainnet
-      [mainnet.id]: http(process.env.NEXT_PUBLIC_TENDERLY_RPC),
+      [virtualMainnet.id]: http(process.env.NEXT_PUBLIC_TENDERLY_RPC),
       [sepolia.id]: http(
         `https://eth-sepolia.g.alchemy.com/v2/${process.env.NEXT_PUBLIC_ALCHEMY_ID}`
       ),
     },
 
-    // Required API Keys
     walletConnectProjectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID,
 
     // Required App Info

@@ -11,8 +11,10 @@ fs_permissions = [
 allow_paths = ["*", "/"]
 
 [rpc_endpoints]
-mainnet = "${MAINNET_RPC_URL}"
-unknown_chain = { key = "${TENDERLY_ACCESS_KEY}", chain = 1, url = "${TENDERLY_RPC}" }
+unknown_chain = { key = "${TENDERLY_ACCESS_KEY}", chain = 69420, url = "${TENDERLY_RPC}" }
+
+[etherscan]
+unknown_chain = { key = "${TENDERLY_ACCESS_KEY}", chain = 69420, url = "${TENDERLY_RPC}" }
 
 [fmt]
 bracket_spacing = true

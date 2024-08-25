@@ -4,7 +4,7 @@
   "description": "A Foundry project, obviously",
   "license": "GPL-3.0",
   "scripts": {
-    "dev": "source .env && script/deploy.sh",
+    "dev": "script/deploy.sh",
     "build": "forge build",
     "build:optimized": "FOUNDRY_PROFILE=optimized forge build",
     "build:smt": "FOUNDRY_PROFILE=smt forge build",
