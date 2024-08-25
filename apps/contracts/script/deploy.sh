@@ -4,9 +4,10 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 source "$SCRIPT_DIR/../.env"
 
-
+# Run the deploy script
 forge script "${SCRIPT_DIR}/Deploy.s.sol:DeployScript" \
   --rpc-url $TENDERLY_RPC \
-  --verify  \
+  --broadcast \
+  --verify \
   --verifier-url "${TENDERLY_RPC}/verify/etherscan" \
-  --etherscan-api-key $TENDERLY_ACCESS_KEY 
+  --etherscan-api-key $TENDERLY_ACCESS_KEY
