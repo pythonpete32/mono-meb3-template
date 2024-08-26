@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import ConnectButton from "./ConnectButton";
+import FaucetButton from "./FaucetButton";
 
 // import MobileDrawer from "@/components/app/MobileDrawer";
 // import NavDropdown from "@/components/app/NavDropdown";
@@ -67,6 +68,7 @@ function Navbar() {
             </svg>
           </a> */}
 
+          <FaucetButton />
           <ThemeSwitcher />
           <ConnectButton />
         </div>
